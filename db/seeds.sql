@@ -1,1 +1,1 @@
-INSERT INTO burgers (burger_name, devoured) VALUES ("double-double", TRUE), ("big-mac", FALSE), ("original-italian", TRUE)
+INSERT INTO burgers (name, devoured) VALUES ("double-double", TRUE), ("big-mac", FALSE), ("original-italian", TRUE)

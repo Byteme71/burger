@@ -56,6 +56,7 @@ var orm = {
         queryString += ") ";
 
         console.log(queryString);
+        console.log(burgersVal);
 
         connection.query(queryString, burgersVal, function (err, result) {
             if (err) {
