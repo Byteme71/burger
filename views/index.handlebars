@@ -6,7 +6,7 @@
         <div class="card bg-light mb-3">
             {{!-- "card bg-light mb-3" --}}
             <h1 class="card-title display-4 text-center">Burgers</h1>
-            <img 
+            <img src="https://giphy.com/gifs/y3gSFLgNLMaBi/html5" alt="burger gif">
             <div class="card-body mx-auto">
                 <div class="row">
                     <div class="col-md-6 mx-auto">
@@ -17,7 +17,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6 mx-auto">
-                        <h2 class= "display-8">Uneaten Burger!</h2>
+                        <h2 class="display-8">Uneaten Burger!</h2>
 
                         <ul>
                             {{#each burgers}} {{#if devoured}} {{>burgers/burger-block devoured=false}} {{/if}} {{/each}}
