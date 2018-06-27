@@ -1,0 +1,20 @@
+*{
+       box-sizing: border-box;
+}
+
+
+body {
+    background-image: url("../img/800px_COLOURBOX18984264.jpg");
+    background-repeat: repeat;
+}
+
+.card {
+    text-align: center;
+    /* margin: 12% 18%; */
+    padding: 50px;
+    background-color: rgba(224, 224, 224, 0.8);
+    box-shadow: 1px 1px 1px 1px rgb(168, 168, 168);
+    border-radius: 10px;
+    opacity: .9;
+    width: 100%;
+}

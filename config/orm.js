@@ -25,6 +25,7 @@ function objToSql(ob) {
             // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
             // e.g. {sleepy: true} => ["sleepy=true"]
             arr.push(key + "=" + value);
+            console.log(value);
         }
     }
 
@@ -55,8 +56,8 @@ var orm = {
         queryString += printQuestionMarks(burgersVal.length);
         queryString += ") ";
 
-        console.log(queryString);
-        console.log(burgersVal);
+        // console.log(queryString);
+        // console.log(burgersVal);
 
         connection.query(queryString, burgersVal, function (err, result) {
             if (err) {
@@ -76,10 +77,14 @@ var orm = {
         queryString += condition;
 
         console.log(queryString);
+        console.log(objColVals);
+        
         connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
             }
+
+            console.log(objColVals);
 
             cb(result);
         });

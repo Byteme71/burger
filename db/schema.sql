@@ -9,3 +9,5 @@ CREATE TABLE burgers (
     name VARCHAR (300) NOT NULL,
     devoured BOOLEAN NOT NULL DEFAULT 0
 );
+
+SELECT * FROM burgers

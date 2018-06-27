@@ -6,10 +6,12 @@ var burger = require("../models/burger.js");
 
 router.get("/", function (req, res) {
     burger.selectAll(function (data) {
+
+        // console.log("tell me what this is:" + data);
         var hbsObject = {
-            burger: data
+            burgers: data
         };
-        console.log(hbsObject);
+        // console.log(hbsObject);
         res.render("index", hbsObject);
     });
 });
@@ -35,6 +37,9 @@ router.put("/api/burgers/:id", function (req, res) {
     burger.updateOne({
         devoured: req.body.devoured
     }, condition, function (result) {
+
+        console.log(req.body.devoured);
+
         if (result.changedRows == 0) {
             // If no rows were changed, then the ID must not exist, so 404
             return res.status(404).end();
